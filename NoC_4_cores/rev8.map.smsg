@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at input_m.v(37): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/input_m.v Line: 37
+Warning (10268): Verilog HDL information at output_m.v(37): always construct contains both blocking and non-blocking assignments File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/output_m.v Line: 37

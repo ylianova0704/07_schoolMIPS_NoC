@@ -1,0 +1,86 @@
+//rev 2 all works correct
+
+module InPort (
+dataE, 
+dataW,
+dataS,
+dataN,
+dataL,
+Inr_L,Inr_N,Inr_E,Inr_S,Inr_W,
+Inw_L,Inw_N,Inw_E,Inw_S,Inw_W,
+DataFiFo,
+wrreq,
+clk,
+full,
+reset
+);
+parameter DATA_WIDTH =37;
+
+input [DATA_WIDTH-1:0]  dataE, dataW, dataS, dataN, dataL;
+input full;
+input reset;
+input clk;
+input Inr_L,Inr_N,Inr_E,Inr_S,Inr_W;
+output Inw_L,Inw_N,Inw_E,Inw_S,Inw_W;
+output [DATA_WIDTH-1:0] DataFiFo;
+output wrreq;
+reg wrreq;
+reg [DATA_WIDTH-1:0] DataFiFo;
+reg step;	/////////!!!!! can be 1 bit!!!
+reg [2:0] port;
+reg [4:0] Inw;
+wire [4:0] Inr;
+
+assign Inr = {Inr_L,Inr_N,Inr_E,Inr_S,Inr_W};
+assign {Inw_L,Inw_N,Inw_E,Inw_S,Inw_W} = Inw;
+
+always @(posedge clk or posedge reset)
+begin
+	if (reset == 1'b1)
+        begin
+			step<=0;
+			port<=0;
+			wrreq<=0;
+			Inw<=0;
+			DataFiFo<=9;
+		end
+    else
+		begin
+			case (step)
+				
+				0:  begin
+						if ((!full)&&(Inr > 0)) 
+							begin
+								if ((DataFiFo[4] == 1'b1) || (Inr[port] != 1'b1))
+									begin
+										if (port==4) port = 0;
+										else port=port+1;
+									end
+								if (Inr[port] == 1'b1) 
+									begin
+										Inw<=(1'b1 << port);
+										case (port)
+											0: DataFiFo<=dataW;
+											1: DataFiFo<=dataS;
+											2: DataFiFo<=dataE;
+											3: DataFiFo<=dataN;
+											4: DataFiFo<=dataL;	
+										endcase
+										wrreq<=1'b1;
+										step=1;
+									end
+							end							
+					end	
+				1:  begin
+						wrreq<=1'b0;
+						if (Inr[port] == 1'b0) 
+							begin 
+								Inw<=0;
+								step=0; 									
+							end
+					end
+			endcase
+		end
+	
+end
+endmodule

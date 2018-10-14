@@ -1,0 +1,175 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 352 272)
+	(text "InPort" (rect 5 0 34 12)(font "Arial" ))
+	(text "inst" (rect 8 240 25 252)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "dataE[DATA_WIDTH-1..0]" (rect 0 0 128 12)(font "Arial" ))
+		(text "dataE[DATA_WIDTH-1..0]" (rect 21 27 149 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "dataW[DATA_WIDTH-1..0]" (rect 0 0 132 12)(font "Arial" ))
+		(text "dataW[DATA_WIDTH-1..0]" (rect 21 43 153 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "dataS[DATA_WIDTH-1..0]" (rect 0 0 128 12)(font "Arial" ))
+		(text "dataS[DATA_WIDTH-1..0]" (rect 21 59 149 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "dataN[DATA_WIDTH-1..0]" (rect 0 0 129 12)(font "Arial" ))
+		(text "dataN[DATA_WIDTH-1..0]" (rect 21 75 150 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "dataL[DATA_WIDTH-1..0]" (rect 0 0 127 12)(font "Arial" ))
+		(text "dataL[DATA_WIDTH-1..0]" (rect 21 91 148 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "Inr_L" (rect 0 0 24 12)(font "Arial" ))
+		(text "Inr_L" (rect 21 107 45 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Inr_N" (rect 0 0 27 12)(font "Arial" ))
+		(text "Inr_N" (rect 21 123 48 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "Inr_E" (rect 0 0 25 12)(font "Arial" ))
+		(text "Inr_E" (rect 21 139 46 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "Inr_S" (rect 0 0 25 12)(font "Arial" ))
+		(text "Inr_S" (rect 21 155 46 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "Inr_W" (rect 0 0 29 12)(font "Arial" ))
+		(text "Inr_W" (rect 21 171 50 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 187 35 199)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "full" (rect 0 0 15 12)(font "Arial" ))
+		(text "full" (rect 21 203 36 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 21 219 45 231)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 1))
+	)
+	(port
+		(pt 336 32)
+		(output)
+		(text "Inw_L" (rect 0 0 28 12)(font "Arial" ))
+		(text "Inw_L" (rect 287 27 315 39)(font "Arial" ))
+		(line (pt 336 32)(pt 320 32)(line_width 1))
+	)
+	(port
+		(pt 336 48)
+		(output)
+		(text "Inw_N" (rect 0 0 30 12)(font "Arial" ))
+		(text "Inw_N" (rect 285 43 315 55)(font "Arial" ))
+		(line (pt 336 48)(pt 320 48)(line_width 1))
+	)
+	(port
+		(pt 336 64)
+		(output)
+		(text "Inw_E" (rect 0 0 29 12)(font "Arial" ))
+		(text "Inw_E" (rect 286 59 315 71)(font "Arial" ))
+		(line (pt 336 64)(pt 320 64)(line_width 1))
+	)
+	(port
+		(pt 336 80)
+		(output)
+		(text "Inw_S" (rect 0 0 29 12)(font "Arial" ))
+		(text "Inw_S" (rect 286 75 315 87)(font "Arial" ))
+		(line (pt 336 80)(pt 320 80)(line_width 1))
+	)
+	(port
+		(pt 336 96)
+		(output)
+		(text "Inw_W" (rect 0 0 33 12)(font "Arial" ))
+		(text "Inw_W" (rect 282 91 315 103)(font "Arial" ))
+		(line (pt 336 96)(pt 320 96)(line_width 1))
+	)
+	(port
+		(pt 336 112)
+		(output)
+		(text "DataFiFo[DATA_WIDTH-1..0]" (rect 0 0 146 12)(font "Arial" ))
+		(text "DataFiFo[DATA_WIDTH-1..0]" (rect 169 107 315 119)(font "Arial" ))
+		(line (pt 336 112)(pt 320 112)(line_width 3))
+	)
+	(port
+		(pt 336 128)
+		(output)
+		(text "wrreq" (rect 0 0 25 12)(font "Arial" ))
+		(text "wrreq" (rect 290 123 315 135)(font "Arial" ))
+		(line (pt 336 128)(pt 320 128)(line_width 1))
+	)
+	(parameter
+		"DATA_WIDTH"
+		"37"
+		""
+	)
+	(drawing
+		(rectangle (rect 16 16 320 240)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 352 -64 452 16))
+)

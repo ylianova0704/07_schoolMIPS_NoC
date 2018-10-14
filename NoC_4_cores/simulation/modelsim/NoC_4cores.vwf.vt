@@ -1,0 +1,840 @@
+// Copyright (C) 2016  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/14/2018 11:09:34"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          4sw_1
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module 4sw_1_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [31:0] dataFromCPUToRouter0;
+reg [31:0] dataFromCPUToRouter1;
+reg [31:0] dataFromCPUToRouter2;
+reg [31:0] dataFromCPUToRouter3;
+reg dataSend0;
+reg dataSend1;
+reg dataSend2;
+reg dataSend3;
+reg [3:0] dataToWhom0;
+reg [3:0] dataToWhom1;
+reg [3:0] dataToWhom2;
+reg [3:0] dataToWhom3;
+reg reset;
+// wires                                               
+wire dataGet0;
+wire dataGet1;
+wire dataGet2;
+wire pin_name8;
+
+// assign statements (if any)                          
+4sw_1 i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.dataFromCPUToRouter0(dataFromCPUToRouter0),
+	.dataFromCPUToRouter1(dataFromCPUToRouter1),
+	.dataFromCPUToRouter2(dataFromCPUToRouter2),
+	.dataFromCPUToRouter3(dataFromCPUToRouter3),
+	.dataGet0(dataGet0),
+	.dataGet1(dataGet1),
+	.dataGet2(dataGet2),
+	.dataSend0(dataSend0),
+	.dataSend1(dataSend1),
+	.dataSend2(dataSend2),
+	.dataSend3(dataSend3),
+	.dataToWhom0(dataToWhom0),
+	.dataToWhom1(dataToWhom1),
+	.dataToWhom2(dataToWhom2),
+	.dataToWhom3(dataToWhom3),
+	.pin_name8(pin_name8),
+	.reset(reset)
+);
+initial 
+begin 
+#1000000 $stop;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #10000 1'b1;
+	#10000;
+end 
+// dataFromCPUToRouter0[ 31 ]
+initial
+begin
+	dataFromCPUToRouter0[31] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 30 ]
+initial
+begin
+	dataFromCPUToRouter0[30] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 29 ]
+initial
+begin
+	dataFromCPUToRouter0[29] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 28 ]
+initial
+begin
+	dataFromCPUToRouter0[28] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 27 ]
+initial
+begin
+	dataFromCPUToRouter0[27] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 26 ]
+initial
+begin
+	dataFromCPUToRouter0[26] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 25 ]
+initial
+begin
+	dataFromCPUToRouter0[25] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 24 ]
+initial
+begin
+	dataFromCPUToRouter0[24] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 23 ]
+initial
+begin
+	dataFromCPUToRouter0[23] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 22 ]
+initial
+begin
+	dataFromCPUToRouter0[22] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 21 ]
+initial
+begin
+	dataFromCPUToRouter0[21] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 20 ]
+initial
+begin
+	dataFromCPUToRouter0[20] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 19 ]
+initial
+begin
+	dataFromCPUToRouter0[19] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 18 ]
+initial
+begin
+	dataFromCPUToRouter0[18] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 17 ]
+initial
+begin
+	dataFromCPUToRouter0[17] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 16 ]
+initial
+begin
+	dataFromCPUToRouter0[16] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 15 ]
+initial
+begin
+	dataFromCPUToRouter0[15] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 14 ]
+initial
+begin
+	dataFromCPUToRouter0[14] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 13 ]
+initial
+begin
+	dataFromCPUToRouter0[13] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 12 ]
+initial
+begin
+	dataFromCPUToRouter0[12] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 11 ]
+initial
+begin
+	dataFromCPUToRouter0[11] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 10 ]
+initial
+begin
+	dataFromCPUToRouter0[10] = 1'b1;
+end 
+// dataFromCPUToRouter0[ 9 ]
+initial
+begin
+	dataFromCPUToRouter0[9] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 8 ]
+initial
+begin
+	dataFromCPUToRouter0[8] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 7 ]
+initial
+begin
+	dataFromCPUToRouter0[7] = 1'b1;
+end 
+// dataFromCPUToRouter0[ 6 ]
+initial
+begin
+	dataFromCPUToRouter0[6] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 5 ]
+initial
+begin
+	dataFromCPUToRouter0[5] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 4 ]
+initial
+begin
+	dataFromCPUToRouter0[4] = 1'b1;
+end 
+// dataFromCPUToRouter0[ 3 ]
+initial
+begin
+	dataFromCPUToRouter0[3] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 2 ]
+initial
+begin
+	dataFromCPUToRouter0[2] = 1'b0;
+end 
+// dataFromCPUToRouter0[ 1 ]
+initial
+begin
+	dataFromCPUToRouter0[1] = 1'b1;
+end 
+// dataFromCPUToRouter0[ 0 ]
+initial
+begin
+	dataFromCPUToRouter0[0] = 1'b1;
+end 
+// dataFromCPUToRouter1[ 31 ]
+initial
+begin
+	dataFromCPUToRouter1[31] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 30 ]
+initial
+begin
+	dataFromCPUToRouter1[30] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 29 ]
+initial
+begin
+	dataFromCPUToRouter1[29] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 28 ]
+initial
+begin
+	dataFromCPUToRouter1[28] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 27 ]
+initial
+begin
+	dataFromCPUToRouter1[27] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 26 ]
+initial
+begin
+	dataFromCPUToRouter1[26] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 25 ]
+initial
+begin
+	dataFromCPUToRouter1[25] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 24 ]
+initial
+begin
+	dataFromCPUToRouter1[24] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 23 ]
+initial
+begin
+	dataFromCPUToRouter1[23] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 22 ]
+initial
+begin
+	dataFromCPUToRouter1[22] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 21 ]
+initial
+begin
+	dataFromCPUToRouter1[21] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 20 ]
+initial
+begin
+	dataFromCPUToRouter1[20] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 19 ]
+initial
+begin
+	dataFromCPUToRouter1[19] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 18 ]
+initial
+begin
+	dataFromCPUToRouter1[18] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 17 ]
+initial
+begin
+	dataFromCPUToRouter1[17] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 16 ]
+initial
+begin
+	dataFromCPUToRouter1[16] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 15 ]
+initial
+begin
+	dataFromCPUToRouter1[15] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 14 ]
+initial
+begin
+	dataFromCPUToRouter1[14] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 13 ]
+initial
+begin
+	dataFromCPUToRouter1[13] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 12 ]
+initial
+begin
+	dataFromCPUToRouter1[12] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 11 ]
+initial
+begin
+	dataFromCPUToRouter1[11] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 10 ]
+initial
+begin
+	dataFromCPUToRouter1[10] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 9 ]
+initial
+begin
+	dataFromCPUToRouter1[9] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 8 ]
+initial
+begin
+	dataFromCPUToRouter1[8] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 7 ]
+initial
+begin
+	dataFromCPUToRouter1[7] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 6 ]
+initial
+begin
+	dataFromCPUToRouter1[6] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 5 ]
+initial
+begin
+	dataFromCPUToRouter1[5] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 4 ]
+initial
+begin
+	dataFromCPUToRouter1[4] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 3 ]
+initial
+begin
+	dataFromCPUToRouter1[3] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 2 ]
+initial
+begin
+	dataFromCPUToRouter1[2] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 1 ]
+initial
+begin
+	dataFromCPUToRouter1[1] = 1'b0;
+end 
+// dataFromCPUToRouter1[ 0 ]
+initial
+begin
+	dataFromCPUToRouter1[0] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 31 ]
+initial
+begin
+	dataFromCPUToRouter2[31] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 30 ]
+initial
+begin
+	dataFromCPUToRouter2[30] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 29 ]
+initial
+begin
+	dataFromCPUToRouter2[29] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 28 ]
+initial
+begin
+	dataFromCPUToRouter2[28] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 27 ]
+initial
+begin
+	dataFromCPUToRouter2[27] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 26 ]
+initial
+begin
+	dataFromCPUToRouter2[26] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 25 ]
+initial
+begin
+	dataFromCPUToRouter2[25] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 24 ]
+initial
+begin
+	dataFromCPUToRouter2[24] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 23 ]
+initial
+begin
+	dataFromCPUToRouter2[23] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 22 ]
+initial
+begin
+	dataFromCPUToRouter2[22] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 21 ]
+initial
+begin
+	dataFromCPUToRouter2[21] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 20 ]
+initial
+begin
+	dataFromCPUToRouter2[20] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 19 ]
+initial
+begin
+	dataFromCPUToRouter2[19] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 18 ]
+initial
+begin
+	dataFromCPUToRouter2[18] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 17 ]
+initial
+begin
+	dataFromCPUToRouter2[17] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 16 ]
+initial
+begin
+	dataFromCPUToRouter2[16] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 15 ]
+initial
+begin
+	dataFromCPUToRouter2[15] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 14 ]
+initial
+begin
+	dataFromCPUToRouter2[14] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 13 ]
+initial
+begin
+	dataFromCPUToRouter2[13] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 12 ]
+initial
+begin
+	dataFromCPUToRouter2[12] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 11 ]
+initial
+begin
+	dataFromCPUToRouter2[11] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 10 ]
+initial
+begin
+	dataFromCPUToRouter2[10] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 9 ]
+initial
+begin
+	dataFromCPUToRouter2[9] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 8 ]
+initial
+begin
+	dataFromCPUToRouter2[8] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 7 ]
+initial
+begin
+	dataFromCPUToRouter2[7] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 6 ]
+initial
+begin
+	dataFromCPUToRouter2[6] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 5 ]
+initial
+begin
+	dataFromCPUToRouter2[5] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 4 ]
+initial
+begin
+	dataFromCPUToRouter2[4] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 3 ]
+initial
+begin
+	dataFromCPUToRouter2[3] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 2 ]
+initial
+begin
+	dataFromCPUToRouter2[2] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 1 ]
+initial
+begin
+	dataFromCPUToRouter2[1] = 1'b0;
+end 
+// dataFromCPUToRouter2[ 0 ]
+initial
+begin
+	dataFromCPUToRouter2[0] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 31 ]
+initial
+begin
+	dataFromCPUToRouter3[31] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 30 ]
+initial
+begin
+	dataFromCPUToRouter3[30] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 29 ]
+initial
+begin
+	dataFromCPUToRouter3[29] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 28 ]
+initial
+begin
+	dataFromCPUToRouter3[28] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 27 ]
+initial
+begin
+	dataFromCPUToRouter3[27] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 26 ]
+initial
+begin
+	dataFromCPUToRouter3[26] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 25 ]
+initial
+begin
+	dataFromCPUToRouter3[25] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 24 ]
+initial
+begin
+	dataFromCPUToRouter3[24] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 23 ]
+initial
+begin
+	dataFromCPUToRouter3[23] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 22 ]
+initial
+begin
+	dataFromCPUToRouter3[22] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 21 ]
+initial
+begin
+	dataFromCPUToRouter3[21] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 20 ]
+initial
+begin
+	dataFromCPUToRouter3[20] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 19 ]
+initial
+begin
+	dataFromCPUToRouter3[19] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 18 ]
+initial
+begin
+	dataFromCPUToRouter3[18] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 17 ]
+initial
+begin
+	dataFromCPUToRouter3[17] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 16 ]
+initial
+begin
+	dataFromCPUToRouter3[16] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 15 ]
+initial
+begin
+	dataFromCPUToRouter3[15] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 14 ]
+initial
+begin
+	dataFromCPUToRouter3[14] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 13 ]
+initial
+begin
+	dataFromCPUToRouter3[13] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 12 ]
+initial
+begin
+	dataFromCPUToRouter3[12] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 11 ]
+initial
+begin
+	dataFromCPUToRouter3[11] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 10 ]
+initial
+begin
+	dataFromCPUToRouter3[10] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 9 ]
+initial
+begin
+	dataFromCPUToRouter3[9] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 8 ]
+initial
+begin
+	dataFromCPUToRouter3[8] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 7 ]
+initial
+begin
+	dataFromCPUToRouter3[7] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 6 ]
+initial
+begin
+	dataFromCPUToRouter3[6] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 5 ]
+initial
+begin
+	dataFromCPUToRouter3[5] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 4 ]
+initial
+begin
+	dataFromCPUToRouter3[4] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 3 ]
+initial
+begin
+	dataFromCPUToRouter3[3] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 2 ]
+initial
+begin
+	dataFromCPUToRouter3[2] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 1 ]
+initial
+begin
+	dataFromCPUToRouter3[1] = 1'b0;
+end 
+// dataFromCPUToRouter3[ 0 ]
+initial
+begin
+	dataFromCPUToRouter3[0] = 1'b0;
+end 
+
+// dataSend0
+initial
+begin
+	dataSend0 = 1'b0;
+	dataSend0 = #20000 1'b1;
+	dataSend0 = #100000 1'b0;
+end 
+
+// dataSend1
+initial
+begin
+	dataSend1 = 1'b0;
+end 
+
+// dataSend2
+initial
+begin
+	dataSend2 = 1'b0;
+end 
+
+// dataSend3
+initial
+begin
+	dataSend3 = 1'b0;
+end 
+// dataToWhom0[ 3 ]
+initial
+begin
+	dataToWhom0[3] = 1'b0;
+end 
+// dataToWhom0[ 2 ]
+initial
+begin
+	dataToWhom0[2] = 1'b0;
+end 
+// dataToWhom0[ 1 ]
+initial
+begin
+	dataToWhom0[1] = 1'b1;
+end 
+// dataToWhom0[ 0 ]
+initial
+begin
+	dataToWhom0[0] = 1'b1;
+end 
+// dataToWhom1[ 3 ]
+initial
+begin
+	dataToWhom1[3] = 1'b0;
+end 
+// dataToWhom1[ 2 ]
+initial
+begin
+	dataToWhom1[2] = 1'b0;
+end 
+// dataToWhom1[ 1 ]
+initial
+begin
+	dataToWhom1[1] = 1'b0;
+end 
+// dataToWhom1[ 0 ]
+initial
+begin
+	dataToWhom1[0] = 1'b0;
+end 
+// dataToWhom2[ 3 ]
+initial
+begin
+	dataToWhom2[3] = 1'b0;
+end 
+// dataToWhom2[ 2 ]
+initial
+begin
+	dataToWhom2[2] = 1'b0;
+end 
+// dataToWhom2[ 1 ]
+initial
+begin
+	dataToWhom2[1] = 1'b0;
+end 
+// dataToWhom2[ 0 ]
+initial
+begin
+	dataToWhom2[0] = 1'b0;
+end 
+// dataToWhom3[ 3 ]
+initial
+begin
+	dataToWhom3[3] = 1'b0;
+end 
+// dataToWhom3[ 2 ]
+initial
+begin
+	dataToWhom3[2] = 1'b0;
+end 
+// dataToWhom3[ 1 ]
+initial
+begin
+	dataToWhom3[1] = 1'b0;
+end 
+// dataToWhom3[ 0 ]
+initial
+begin
+	dataToWhom3[0] = 1'b0;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+end 
+endmodule
+

@@ -1,0 +1,60 @@
+
+State Machine - |4sw_1|NoCSimp3_sw:sw7|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:inst1|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:inst4|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:inst5|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:inst2|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:inst3|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:inst|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:sw2|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:sw1|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 
+
+State Machine - |4sw_1|NoCSimp3_sw:sw6|OutPort:Output|step
+Name step.00 step.10 step.01 
+step.00 0 0 0 
+step.01 1 0 1 
+step.10 1 1 0 

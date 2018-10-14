@@ -1,0 +1,26 @@
+Quartus II Archive log --	C:/data/training/NoCSimp_stat/NocSimp_stat_v1.qarlog
+
+Archive:	C:/data/training/NoCSimp_stat/NocSimp_stat_v1.qar
+Date:		Sat Mar 19 23:38:48 2011
+Quartus II		9.1 Build 222 10/21/2009 SJ Full Version
+
+	=========== Files Selected: ===========
+C:/data/training/NoCSimp_stat/NoCSimp.qpf
+C:/data/training/NoCSimp_stat/NoCSimp.qsf
+C:/data/training/NoCSimp_stat/NoCSimp3_m_inout.bdf
+C:/data/training/NoCSimp_stat/NoCSimp_inout.vwf
+C:/data/training/NoCSimp_stat/NocSimp2.qsf
+C:/data/training/NoCSimp_stat/assignment_defaults.qdf
+C:/data/training/NoCSimp_stat/db/rev6.sim.cvwf
+C:/data/training/NoCSimp_stat/fifo.v
+C:/data/training/NoCSimp_stat/input_m.v
+C:/data/training/NoCSimp_stat/output_m.v
+C:/data/training/NoCSimp_stat/rev3.qsf
+C:/data/training/NoCSimp_stat/rev4.qsf
+C:/data/training/NoCSimp_stat/rev5.qsf
+C:/data/training/NoCSimp_stat/rev6.qsf
+C:/data/training/NoCSimp_stat/rev7.qsf
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

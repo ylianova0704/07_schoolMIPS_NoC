@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.664 ns
+From           : Inr_W
+To             : InPort:inst1|DataFiFo[26]
+From Clock     : --
+To Clock       : clck
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.750 ns
+From           : InPort:inst1|DataFiFo[29]
+To             : data[29]
+From Clock     : clck
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -1.077 ns
+From           : dataInW[16]
+To             : InPort:inst1|DataFiFo[16]
+From Clock     : --
+To Clock       : clck
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clck'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 146.05 MHz ( period = 6.847 ns )
+From           : InPort:inst1|port[0]
+To             : InPort:inst1|DataFiFo[26]
+From Clock     : clck
+To Clock       : clck
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

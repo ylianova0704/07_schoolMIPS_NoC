@@ -1,0 +1,64 @@
+Quartus II Archive log --	D:/ROU/NoCSimp/NoCSimp.qarlog
+
+Archive:	D:/ROU/NoCSimp/NoCSimp.qar
+Date:		Fri Jan 14 15:57:37 2011
+Quartus II		7.2 Build 151 09/26/2007 SJ Full Version
+
+	=========== Files Selected: ===========
+D:/ROU/NoCSimp/InPort.bsf
+D:/ROU/NoCSimp/NoCSimp.asm.rpt
+D:/ROU/NoCSimp/NoCSimp.done
+D:/ROU/NoCSimp/NoCSimp.eda.rpt
+D:/ROU/NoCSimp/NoCSimp.fit.rpt
+D:/ROU/NoCSimp/NoCSimp.fit.smsg
+D:/ROU/NoCSimp/NoCSimp.fit.summary
+D:/ROU/NoCSimp/NoCSimp.flow.rpt
+D:/ROU/NoCSimp/NoCSimp.map.rpt
+D:/ROU/NoCSimp/NoCSimp.map.smsg
+D:/ROU/NoCSimp/NoCSimp.map.summary
+D:/ROU/NoCSimp/NoCSimp.pin
+D:/ROU/NoCSimp/NoCSimp.pof
+D:/ROU/NoCSimp/NoCSimp.qarlog
+D:/ROU/NoCSimp/NoCSimp.qsf
+D:/ROU/NoCSimp/NoCSimp.sim.rpt
+D:/ROU/NoCSimp/NoCSimp.sof
+D:/ROU/NoCSimp/NoCSimp.tan.rpt
+D:/ROU/NoCSimp/NoCSimp.tan.summary
+D:/ROU/NoCSimp/NoCSimp.vwf
+D:/ROU/NoCSimp/NoCSimp2.bdf
+D:/ROU/NoCSimp/NoCSimp_.bdf
+D:/ROU/NoCSimp/assignment_defaults.qdf
+D:/ROU/NoCSimp/db/NoCSimp.cbx.xml
+D:/ROU/NoCSimp/db/NoCSimp.qpf
+D:/ROU/NoCSimp/db/NoCSimp.sim.cvwf
+D:/ROU/NoCSimp/db/a_dpfifo_2981.tdf
+D:/ROU/NoCSimp/db/a_dpfifo_4n81.tdf
+D:/ROU/NoCSimp/db/a_fefifo_t7f.tdf
+D:/ROU/NoCSimp/db/altsyncram_uql1.tdf
+D:/ROU/NoCSimp/db/cntr_gjb.tdf
+D:/ROU/NoCSimp/db/cntr_sj7.tdf
+D:/ROU/NoCSimp/db/dpram_kj51.tdf
+D:/ROU/NoCSimp/db/scfifo_r281.tdf
+D:/ROU/NoCSimp/db/scfifo_tg81.tdf
+D:/ROU/NoCSimp/fifo.bsf
+D:/ROU/NoCSimp/fifo.inc
+D:/ROU/NoCSimp/fifo.v
+D:/ROU/NoCSimp/fifo_bb.v
+D:/ROU/NoCSimp/fifo_inst.v
+D:/ROU/NoCSimp/input.v
+D:/ROU/NoCSimp/megafunctions/a_dpfifo.inc
+D:/ROU/NoCSimp/megafunctions/a_f2fifo.inc
+D:/ROU/NoCSimp/megafunctions/a_fffifo.inc
+D:/ROU/NoCSimp/megafunctions/a_i2fifo.inc
+D:/ROU/NoCSimp/megafunctions/a_regfifo.inc
+D:/ROU/NoCSimp/megafunctions/aglobal72.inc
+D:/ROU/NoCSimp/megafunctions/cbx.lst
+D:/ROU/NoCSimp/megafunctions/scfifo.tdf
+	======= Total: 49 files to archive =======
+
+
+
+******* Archived project restoration attempt on Sat Jan 15 10:51:42 2011
+Source archive file:	C:/data/training/NoCSimp.qar
+Archive was extracted into	C:/data/training/NoCSimp_restored
+		 - successfully.

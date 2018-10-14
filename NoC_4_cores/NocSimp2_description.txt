@@ -1,0 +1,3 @@
+Revision name:      NocSimp2
+Created on:         Saturday, January 15, 2011
+Based on :          NoCSimp

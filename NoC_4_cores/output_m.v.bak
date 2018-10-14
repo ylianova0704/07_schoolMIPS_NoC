@@ -1,0 +1,82 @@
+module OutPort (
+dataE, 
+dataW,
+dataS,
+dataN,
+dataL,
+Inr_L,Inr_N,Inr_E,Inr_S,Inr_W,
+Inw_L,Inw_N,Inw_E,Inw_S,Inw_W,
+DataFiFo,
+rdreq,
+clk,
+empty,
+reset
+);
+
+parameter position = 4'b0101; //ctntr X: 01 Y: 01
+parameter DATA_WIDTH =37;
+
+output [DATA_WIDTH-1:0]  dataE, dataW, dataS, dataN, dataL;
+input empty;
+input reset;
+input clk;
+output Inr_L,Inr_N,Inr_E,Inr_S,Inr_W;
+input Inw_L,Inw_N,Inw_E,Inw_S,Inw_W;
+input [DATA_WIDTH-1:0] DataFiFo;
+output rdreq;
+reg rdreq;
+reg [DATA_WIDTH-1:0]  dataE, dataW, dataS, dataN, dataL;
+reg [1:0] step;	/////////!!!!! can be 1 bit!!!
+reg [2:0] port;
+reg [4:0] Inr;
+wire [4:0] Inw;
+
+assign Inw = {Inw_L,Inw_N,Inw_E,Inw_S,Inw_W};
+assign {Inr_L,Inr_N,Inr_E,Inr_S,Inr_W} = Inr;
+
+always @(posedge clk or posedge reset)
+begin
+	if (reset == 1'b1)
+        begin
+			step<=0;
+			port<=0;
+			rdreq<=0;
+			Inr<=0;
+			dataE<=1; 
+			dataW<=2; 
+			dataS<=3;
+			dataN<=4;
+			dataL<=5;
+		end
+    else
+		begin
+			case (step)
+				0:  if (!empty)
+							begin
+								rdreq<=1;
+
+								step=1;
+							end
+				1: 	begin
+						rdreq<=0;
+						if (Inw == Inr)
+							begin
+								Inr<=0;
+								step=2;
+							end
+						//step=2;
+					end
+				2:  begin
+																		//XY routing//
+								if (DataFiFo [1:0] > position[1:0]) begin Inr <= 5'b00100; dataE<=DataFiFo; end //Inr ^ 4'b00100; //E
+								else if (DataFiFo [1:0] < position[1:0]) begin Inr <= 5'b00001; dataW<=DataFiFo; end //W
+								     else if (DataFiFo [3:2] > position[3:2]) begin Inr <= 5'b01000; dataN<=DataFiFo; end //N
+								          else if (DataFiFo [3:2] < position[3:2]) begin Inr <= 5'b00010; dataS<=DataFiFo; end //S
+											   else begin Inr<=5'b10000; dataL<=DataFiFo; end //L
+								step=0;
+					end
+
+			endcase
+		end
+end				
+endmodule

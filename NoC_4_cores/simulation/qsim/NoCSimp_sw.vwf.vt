@@ -1,0 +1,303 @@
+// Copyright (C) 2016  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/14/2018 02:58:05"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          4sw_1
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module 4sw_1_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg [36:0] dataInL;
+reg [36:0] dataInL4;
+reg [36:0] dataInL15;
+reg [36:0] dataInL30;
+reg Inr_L;
+reg Inr_L5;
+reg Inr_L16;
+reg Inr_L31;
+reg Outw_L;
+reg Outw_L1;
+reg Outw_L13;
+reg Outw_L26;
+reg reset;
+// wires                                               
+wire [36:0] dataOutL;
+wire [36:0] dataOutL9;
+wire [36:0] dataOutL22;
+wire [36:0] dataOutL39;
+wire Inw_L;
+wire Inw_L7;
+wire Inw_L18;
+wire Inw_L34;
+wire Outr_L;
+wire Outr_L10;
+wire Outr_L23;
+wire Outr_L40;
+
+// assign statements (if any)                          
+4sw_1 i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.dataInL(dataInL),
+	.dataInL4(dataInL4),
+	.dataInL15(dataInL15),
+	.dataInL30(dataInL30),
+	.dataOutL(dataOutL),
+	.dataOutL9(dataOutL9),
+	.dataOutL22(dataOutL22),
+	.dataOutL39(dataOutL39),
+	.Inr_L(Inr_L),
+	.Inr_L5(Inr_L5),
+	.Inr_L16(Inr_L16),
+	.Inr_L31(Inr_L31),
+	.Inw_L(Inw_L),
+	.Inw_L7(Inw_L7),
+	.Inw_L18(Inw_L18),
+	.Inw_L34(Inw_L34),
+	.Outr_L(Outr_L),
+	.Outr_L10(Outr_L10),
+	.Outr_L23(Outr_L23),
+	.Outr_L40(Outr_L40),
+	.Outw_L(Outw_L),
+	.Outw_L1(Outw_L1),
+	.Outw_L13(Outw_L13),
+	.Outw_L26(Outw_L26),
+	.reset(reset)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// dataInL[ 36 ]
+initial
+begin
+	dataInL[36] = 1'b0;
+end 
+// dataInL[ 35 ]
+initial
+begin
+	dataInL[35] = 1'b0;
+end 
+// dataInL[ 34 ]
+initial
+begin
+	dataInL[34] = 1'b0;
+end 
+// dataInL[ 33 ]
+initial
+begin
+	dataInL[33] = 1'b0;
+end 
+// dataInL[ 32 ]
+initial
+begin
+	dataInL[32] = 1'b0;
+end 
+// dataInL[ 31 ]
+initial
+begin
+	dataInL[31] = 1'b0;
+end 
+// dataInL[ 30 ]
+initial
+begin
+	dataInL[30] = 1'b0;
+end 
+// dataInL[ 29 ]
+initial
+begin
+	dataInL[29] = 1'b0;
+end 
+// dataInL[ 28 ]
+initial
+begin
+	dataInL[28] = 1'b0;
+end 
+// dataInL[ 27 ]
+initial
+begin
+	dataInL[27] = 1'b0;
+end 
+// dataInL[ 26 ]
+initial
+begin
+	dataInL[26] = 1'b0;
+end 
+// dataInL[ 25 ]
+initial
+begin
+	dataInL[25] = 1'b0;
+end 
+// dataInL[ 24 ]
+initial
+begin
+	dataInL[24] = 1'b0;
+end 
+// dataInL[ 23 ]
+initial
+begin
+	dataInL[23] = 1'b0;
+end 
+// dataInL[ 22 ]
+initial
+begin
+	dataInL[22] = 1'b0;
+end 
+// dataInL[ 21 ]
+initial
+begin
+	dataInL[21] = 1'b0;
+end 
+// dataInL[ 20 ]
+initial
+begin
+	dataInL[20] = 1'b0;
+end 
+// dataInL[ 19 ]
+initial
+begin
+	dataInL[19] = 1'b0;
+end 
+// dataInL[ 18 ]
+initial
+begin
+	dataInL[18] = 1'b0;
+end 
+// dataInL[ 17 ]
+initial
+begin
+	dataInL[17] = 1'b0;
+end 
+// dataInL[ 16 ]
+initial
+begin
+	dataInL[16] = 1'b0;
+end 
+// dataInL[ 15 ]
+initial
+begin
+	dataInL[15] = 1'b0;
+end 
+// dataInL[ 14 ]
+initial
+begin
+	dataInL[14] = 1'b0;
+end 
+// dataInL[ 13 ]
+initial
+begin
+	dataInL[13] = 1'b0;
+end 
+// dataInL[ 12 ]
+initial
+begin
+	dataInL[12] = 1'b0;
+end 
+// dataInL[ 11 ]
+initial
+begin
+	dataInL[11] = 1'b0;
+end 
+// dataInL[ 10 ]
+initial
+begin
+	dataInL[10] = 1'b0;
+end 
+// dataInL[ 9 ]
+initial
+begin
+	dataInL[9] = 1'b0;
+end 
+// dataInL[ 8 ]
+initial
+begin
+	dataInL[8] = 1'b0;
+end 
+// dataInL[ 7 ]
+initial
+begin
+	dataInL[7] = 1'b0;
+end 
+// dataInL[ 6 ]
+initial
+begin
+	dataInL[6] = 1'b0;
+end 
+// dataInL[ 5 ]
+initial
+begin
+	dataInL[5] = 1'b0;
+end 
+// dataInL[ 4 ]
+initial
+begin
+	dataInL[4] = 1'b0;
+end 
+// dataInL[ 3 ]
+initial
+begin
+	dataInL[3] = 1'b0;
+end 
+// dataInL[ 2 ]
+initial
+begin
+	dataInL[2] = 1'b0;
+end 
+// dataInL[ 1 ]
+initial
+begin
+	dataInL[1] = 1'b0;
+end 
+// dataInL[ 0 ]
+initial
+begin
+	dataInL[0] = 1'b0;
+end 
+
+// Inr_L
+initial
+begin
+	Inr_L = 1'b0;
+	Inr_L = #20000 1'b1;
+	Inr_L = #90000 1'b0;
+end 
+
+// Outw_L
+initial
+begin
+	Outw_L = 1'b0;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b0;
+	reset = #10000 1'b1;
+	reset = #10000 1'b0;
+end 
+endmodule
+

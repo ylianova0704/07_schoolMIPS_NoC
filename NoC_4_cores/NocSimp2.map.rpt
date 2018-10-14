@@ -1,0 +1,481 @@
+Analysis & Synthesis report for NocSimp2
+Mon Jan 24 16:02:22 2011
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Analysis & Synthesis RAM Summary
+  8. State Machine - |NoCSimp3_m_inout|OutPort:inst2|step
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|altsyncram_7pf1:FIFOram
+ 14. Parameter Settings for User Entity Instance: fifo:inst|scfifo:scfifo_component
+ 15. Parameter Settings for User Entity Instance: OutPort:inst2
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jan 24 16:02:22 2011    ;
+; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Full Version ;
+; Revision Name                      ; NocSimp2                                 ;
+; Top-level Entity Name              ; NoCSimp3_m_inout                         ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 236                                      ;
+;     Total combinational functions  ; 199                                      ;
+;     Dedicated logic registers      ; 236                                      ;
+; Total registers                    ; 236                                      ;
+; Total pins                         ; 417                                      ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 4,096                                    ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                          ; NoCSimp3_m_inout   ; NocSimp2           ;
+; Family name                                                                    ; Cyclone II         ; Stratix II         ;
+; Optimization Technique -- Cyclone II/Cyclone III                               ; Speed              ; Balanced           ;
+; Perform gate-level register retiming                                           ; On                 ; Off                ;
+; Type of Retiming Performed During Resynthesis                                  ; Full               ;                    ;
+; Resynthesis Optimization Effort                                                ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                                       ; Normal             ;                    ;
+; Use Generated Physical Constraints File                                        ; On                 ;                    ;
+; Use smart compilation                                                          ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation                            ; 1                  ; 1                  ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; Parallel Synthesis                                                             ; Off                ; Off                ;
+; DSP Block Balancing                                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto ROM Replacement                                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Block Design Naming                                                            ; Auto               ; Auto               ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                  ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+
+; input_m.v                        ; yes             ; User Verilog HDL File              ; c:/data/training/NoCSimp_restored/input_m.v                   ;
+; output_m.v                       ; yes             ; User Verilog HDL File              ; c:/data/training/NoCSimp_restored/output_m.v                  ;
+; NoCSimp3_m_inout.bdf             ; yes             ; User Block Diagram/Schematic File  ; c:/data/training/NoCSimp_restored/NoCSimp3_m_inout.bdf        ;
+; fifo.v                           ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/fifo.v                      ;
+; scfifo.tdf                       ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/megafunctions/scfifo.tdf    ;
+; a_regfifo.inc                    ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/megafunctions/a_regfifo.inc ;
+; a_dpfifo.inc                     ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/megafunctions/a_dpfifo.inc  ;
+; a_i2fifo.inc                     ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/megafunctions/a_i2fifo.inc  ;
+; a_fffifo.inc                     ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/megafunctions/a_fffifo.inc  ;
+; a_f2fifo.inc                     ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/megafunctions/a_f2fifo.inc  ;
+; aglobal72.inc                    ; yes             ; Other                              ; c:/data/training/NoCSimp_restored/megafunctions/aglobal72.inc ;
+; db/scfifo_5b81.tdf               ; yes             ; Auto-Generated Megafunction        ; c:/data/training/NoCSimp_restored/db/scfifo_5b81.tdf          ;
+; db/a_dpfifo_8h81.tdf             ; yes             ; Auto-Generated Megafunction        ; c:/data/training/NoCSimp_restored/db/a_dpfifo_8h81.tdf        ;
+; db/altsyncram_7pf1.tdf           ; yes             ; Auto-Generated Megafunction        ; c:/data/training/NoCSimp_restored/db/altsyncram_7pf1.tdf      ;
+; db/cntr_fjb.tdf                  ; yes             ; Auto-Generated Megafunction        ; c:/data/training/NoCSimp_restored/db/cntr_fjb.tdf             ;
+; db/cntr_sj7.tdf                  ; yes             ; Auto-Generated Megafunction        ; c:/data/training/NoCSimp_restored/db/cntr_sj7.tdf             ;
+; db/cntr_gjb.tdf                  ; yes             ; Auto-Generated Megafunction        ; c:/data/training/NoCSimp_restored/db/cntr_gjb.tdf             ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 236   ;
+;                                             ;       ;
+; Total combinational functions               ; 199   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 112   ;
+;     -- 3 input functions                    ; 63    ;
+;     -- <=2 input functions                  ; 24    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 182   ;
+;     -- arithmetic mode                      ; 17    ;
+;                                             ;       ;
+; Total registers                             ; 236   ;
+;     -- Dedicated logic registers            ; 236   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 417   ;
+; Total memory bits                           ; 4096  ;
+; Maximum fan-out node                        ; clck  ;
+; Maximum fan-out                             ; 268   ;
+; Total fan-out                               ; 2407  ;
+; Average fan-out                             ; 2.72  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                               ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+; |NoCSimp3_m_inout                        ; 199 (0)           ; 236 (0)      ; 4096        ; 0            ; 0       ; 0         ; 417  ; 0            ; |NoCSimp3_m_inout                                                                                                           ; work         ;
+;    |InPort:inst1|                        ; 131 (131)         ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|InPort:inst1                                                                                              ; work         ;
+;    |OutPort:inst2|                       ; 22 (22)           ; 159 (159)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|OutPort:inst2                                                                                             ; work         ;
+;    |fifo:inst|                           ; 46 (0)            ; 35 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst                                                                                                 ; work         ;
+;       |scfifo:scfifo_component|          ; 46 (0)            ; 35 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst|scfifo:scfifo_component                                                                         ; work         ;
+;          |scfifo_5b81:auto_generated|    ; 46 (0)            ; 35 (0)       ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated                                              ; work         ;
+;             |a_dpfifo_8h81:dpfifo|       ; 46 (26)           ; 35 (15)      ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo                         ; work         ;
+;                |altsyncram_7pf1:FIFOram| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|altsyncram_7pf1:FIFOram ; work         ;
+;                |cntr_fjb:rd_ptr_msb|     ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|cntr_fjb:rd_ptr_msb     ; work         ;
+;                |cntr_gjb:wr_ptr|         ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|cntr_gjb:wr_ptr         ; work         ;
+;                |cntr_sj7:usedw_counter|  ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |NoCSimp3_m_inout|fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|cntr_sj7:usedw_counter  ; work         ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                         ;
++----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                 ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|altsyncram_7pf1:FIFOram|ALTSYNCRAM ; M4K  ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096 ; None ;
++----------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |NoCSimp3_m_inout|OutPort:inst2|step ;
++---------+---------+---------+------------------------+
+; Name    ; step.00 ; step.10 ; step.01                ;
++---------+---------+---------+------------------------+
+; step.00 ; 0       ; 0       ; 0                      ;
+; step.01 ; 1       ; 0       ; 1                      ;
+; step.10 ; 1       ; 1       ; 0                      ;
++---------+---------+---------+------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; OutPort:inst2|dataL[1,3]               ; Stuck at GND due to stuck port data_in ;
+; OutPort:inst2|dataL[0]                 ; Stuck at VCC due to stuck port data_in ;
+; OutPort:inst2|dataN[1]                 ; Stuck at GND due to stuck port data_in ;
+; OutPort:inst2|dataS[2..3]              ; Stuck at GND due to stuck port data_in ;
+; OutPort:inst2|dataS[0]                 ; Stuck at VCC due to stuck port data_in ;
+; OutPort:inst2|dataW[0]                 ; Stuck at GND due to stuck port data_in ;
+; OutPort:inst2|dataL[2]                 ; Stuck at VCC due to stuck port data_in ;
+; OutPort:inst2|dataN[0]                 ; Merged with OutPort:inst2|dataN[3]     ;
+; Total Number of Removed Registers = 10 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 236   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 236   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 214   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; InPort:inst1|DataFiFo[3]               ; 2       ;
+; InPort:inst1|DataFiFo[0]               ; 2       ;
+; OutPort:inst2|dataE[0]                 ; 1       ;
+; OutPort:inst2|dataN[2]                 ; 1       ;
+; OutPort:inst2|dataS[1]                 ; 2       ;
+; OutPort:inst2|dataW[1]                 ; 1       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 8:1                ; 29 bits   ; 145 LEs       ; 87 LEs               ; 58 LEs                 ; Yes        ; |NoCSimp3_m_inout|InPort:inst1|DataFiFo[31] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |NoCSimp3_m_inout|OutPort:inst2|Inr[2]      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |NoCSimp3_m_inout|InPort:inst1|Inw[3]       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |NoCSimp3_m_inout|InPort:inst1|DataFiFo[3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |NoCSimp3_m_inout|InPort:inst1|port~3       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|altsyncram_7pf1:FIFOram ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                  ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo:inst|scfifo:scfifo_component ;
++-------------------------+-------------+----------------------------------------+
+; Parameter Name          ; Value       ; Type                                   ;
++-------------------------+-------------+----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                         ;
+; lpm_width               ; 32          ; Signed Integer                         ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                         ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                         ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                ;
+; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                ;
+; USE_EAB                 ; ON          ; Untyped                                ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED      ; 9           ; Untyped                                ;
+; CBXI_PARAMETER          ; scfifo_5b81 ; Untyped                                ;
++-------------------------+-------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: OutPort:inst2 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; position       ; 0101  ; Unsigned Binary                   ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 7.2 Build 151 09/26/2007 SJ Full Version
+    Info: Processing started: Mon Jan 24 16:02:14 2011
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off NoCSimp -c NocSimp2
+Warning (10090): Verilog HDL syntax warning at input_m.v(96): extra block comment delimiter characters /* within block comment
+Info: Found 1 design units, including 1 entities, in source file input_m.v
+    Info: Found entity 1: InPort
+Info: Found 1 design units, including 1 entities, in source file output_m.v
+    Info: Found entity 1: OutPort
+Info: Found 1 design units, including 1 entities, in source file NoCSimp3_m_inout.bdf
+    Info: Found entity 1: NoCSimp3_m_inout
+Info: Elaborating entity "NoCSimp3_m_inout" for the top level hierarchy
+Warning: Pin "Inr_S" not connected
+Warning: Pin "Inw_S12" not connected
+Warning: Pin "dataInS" not connected
+Warning: Using design file fifo.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: fifo
+Info: Elaborating entity "fifo" for hierarchy "fifo:inst"
+Warning: Entity "scfifo" obtained from "c:/data/training/NoCSimp_restored/megafunctions/scfifo.tdf" instead of from Quartus II megafunction library
+Warning: Using design file megafunctions/scfifo.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info: Found entity 1: scfifo
+Info: Elaborating entity "scfifo" for hierarchy "fifo:inst|scfifo:scfifo_component"
+Info: Found 1 design units, including 1 entities, in source file db/scfifo_5b81.tdf
+    Info: Found entity 1: scfifo_5b81
+Info: Elaborating entity "scfifo_5b81" for hierarchy "fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/a_dpfifo_8h81.tdf
+    Info: Found entity 1: a_dpfifo_8h81
+Info: Elaborating entity "a_dpfifo_8h81" for hierarchy "fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_7pf1.tdf
+    Info: Found entity 1: altsyncram_7pf1
+Info: Elaborating entity "altsyncram_7pf1" for hierarchy "fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|altsyncram_7pf1:FIFOram"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_fjb.tdf
+    Info: Found entity 1: cntr_fjb
+Info: Elaborating entity "cntr_fjb" for hierarchy "fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|cntr_fjb:rd_ptr_msb"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_sj7.tdf
+    Info: Found entity 1: cntr_sj7
+Info: Elaborating entity "cntr_sj7" for hierarchy "fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|cntr_sj7:usedw_counter"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_gjb.tdf
+    Info: Found entity 1: cntr_gjb
+Info: Elaborating entity "cntr_gjb" for hierarchy "fifo:inst|scfifo:scfifo_component|scfifo_5b81:auto_generated|a_dpfifo_8h81:dpfifo|cntr_gjb:wr_ptr"
+Info: Elaborating entity "InPort" for hierarchy "InPort:inst1"
+Warning (10230): Verilog HDL assignment warning at input_m.v(57): truncated value with size 32 to match size of target (3)
+Info: Elaborating entity "OutPort" for hierarchy "OutPort:inst2"
+Warning (10036): Verilog HDL or VHDL warning at output_m.v(29): object "port" assigned a value but never read
+Warning (14130): Reduced register "OutPort:inst2|dataL[3]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "OutPort:inst2|dataL[1]" with stuck data_in port to stuck value GND
+Info: Power-up level of register "OutPort:inst2|dataL[0]" is not specified -- using power-up level of High to minimize register
+Warning (14130): Reduced register "OutPort:inst2|dataL[0]" with stuck data_in port to stuck value VCC
+Warning (14130): Reduced register "OutPort:inst2|dataN[1]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "OutPort:inst2|dataS[3]" with stuck data_in port to stuck value GND
+Warning (14130): Reduced register "OutPort:inst2|dataS[2]" with stuck data_in port to stuck value GND
+Info: Power-up level of register "OutPort:inst2|dataS[0]" is not specified -- using power-up level of High to minimize register
+Warning (14130): Reduced register "OutPort:inst2|dataS[0]" with stuck data_in port to stuck value VCC
+Warning (14130): Reduced register "OutPort:inst2|dataW[0]" with stuck data_in port to stuck value GND
+Info: Power-up level of register "OutPort:inst2|dataL[2]" is not specified -- using power-up level of High to minimize register
+Warning (14130): Reduced register "OutPort:inst2|dataL[2]" with stuck data_in port to stuck value VCC
+Info: Duplicate registers merged to single register
+    Info: Duplicate register "OutPort:inst2|dataN[0]" merged to single register "OutPort:inst2|dataN[3]"
+Info: State machine "|NoCSimp3_m_inout|OutPort:inst2|step" contains 3 states
+Info: Selected Auto state machine encoding method for state machine "|NoCSimp3_m_inout|OutPort:inst2|step"
+Info: Encoding result for state machine "|NoCSimp3_m_inout|OutPort:inst2|step"
+    Info: Completed encoding using 3 state bits
+        Info: Encoded state bit "OutPort:inst2|step.00"
+        Info: Encoded state bit "OutPort:inst2|step.10"
+        Info: Encoded state bit "OutPort:inst2|step.01"
+    Info: State "|NoCSimp3_m_inout|OutPort:inst2|step.00" uses code string "000"
+    Info: State "|NoCSimp3_m_inout|OutPort:inst2|step.01" uses code string "101"
+    Info: State "|NoCSimp3_m_inout|OutPort:inst2|step.10" uses code string "110"
+Info: Registers with preset signals will power-up high
+Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info: Performing gate-level register retiming
+Info: Not allowed to move 196 registers
+    Info: Not allowed to move at least 196 registers because they feed output pins directly
+Info: Quartus II software applied gate-level register retiming to 0 clock domains
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dataL12[3]" stuck at GND
+    Warning (13410): Pin "dataL12[2]" stuck at VCC
+    Warning (13410): Pin "dataL12[1]" stuck at GND
+    Warning (13410): Pin "dataL12[0]" stuck at VCC
+    Warning (13410): Pin "dataN11[1]" stuck at GND
+    Warning (13410): Pin "dataS10[3]" stuck at GND
+    Warning (13410): Pin "dataS10[2]" stuck at GND
+    Warning (13410): Pin "dataS10[0]" stuck at VCC
+    Warning (13410): Pin "dataW9[0]" stuck at GND
+Info: Generated suppressed messages file c:/data/training/NoCSimp_restored/NocSimp2.map.smsg
+Warning: Design contains 34 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "Inr_S"
+    Warning (15610): No output dependent on input pin "Inw_S12"
+    Warning (15610): No output dependent on input pin "dataInS[31]"
+    Warning (15610): No output dependent on input pin "dataInS[30]"
+    Warning (15610): No output dependent on input pin "dataInS[29]"
+    Warning (15610): No output dependent on input pin "dataInS[28]"
+    Warning (15610): No output dependent on input pin "dataInS[27]"
+    Warning (15610): No output dependent on input pin "dataInS[26]"
+    Warning (15610): No output dependent on input pin "dataInS[25]"
+    Warning (15610): No output dependent on input pin "dataInS[24]"
+    Warning (15610): No output dependent on input pin "dataInS[23]"
+    Warning (15610): No output dependent on input pin "dataInS[22]"
+    Warning (15610): No output dependent on input pin "dataInS[21]"
+    Warning (15610): No output dependent on input pin "dataInS[20]"
+    Warning (15610): No output dependent on input pin "dataInS[19]"
+    Warning (15610): No output dependent on input pin "dataInS[18]"
+    Warning (15610): No output dependent on input pin "dataInS[17]"
+    Warning (15610): No output dependent on input pin "dataInS[16]"
+    Warning (15610): No output dependent on input pin "dataInS[15]"
+    Warning (15610): No output dependent on input pin "dataInS[14]"
+    Warning (15610): No output dependent on input pin "dataInS[13]"
+    Warning (15610): No output dependent on input pin "dataInS[12]"
+    Warning (15610): No output dependent on input pin "dataInS[11]"
+    Warning (15610): No output dependent on input pin "dataInS[10]"
+    Warning (15610): No output dependent on input pin "dataInS[9]"
+    Warning (15610): No output dependent on input pin "dataInS[8]"
+    Warning (15610): No output dependent on input pin "dataInS[7]"
+    Warning (15610): No output dependent on input pin "dataInS[6]"
+    Warning (15610): No output dependent on input pin "dataInS[5]"
+    Warning (15610): No output dependent on input pin "dataInS[4]"
+    Warning (15610): No output dependent on input pin "dataInS[3]"
+    Warning (15610): No output dependent on input pin "dataInS[2]"
+    Warning (15610): No output dependent on input pin "dataInS[1]"
+    Warning (15610): No output dependent on input pin "dataInS[0]"
+Info: Implemented 814 device resources after synthesis - the final resource count might be different
+    Info: Implemented 172 input pins
+    Info: Implemented 245 output pins
+    Info: Implemented 365 logic cells
+    Info: Implemented 32 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Allocated 159 megabytes of memory during processing
+    Info: Processing ended: Mon Jan 24 16:02:22 2011
+    Info: Elapsed time: 00:00:08
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in c:/data/training/NoCSimp_restored/NocSimp2.map.smsg.
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Jan 24 16:02:22 2011
+Quartus II Version : 7.2 Build 151 09/26/2007 SJ Full Version
+Revision Name : NocSimp2
+Top-level Entity Name : NoCSimp3_m_inout
+Family : Cyclone II
+Total logic elements : 236
+    Total combinational functions : 199
+    Dedicated logic registers : 236
+Total registers : 236
+Total pins : 417
+Total virtual pins : 0
+Total memory bits : 4,096
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

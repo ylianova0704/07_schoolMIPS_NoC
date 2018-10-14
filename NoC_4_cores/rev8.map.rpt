@@ -1,0 +1,1125 @@
+Analysis & Synthesis report for rev8
+Tue May 15 22:52:26 2018
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. State Machine - |4sw_1|NoCSimp3_sw:sw0|OutPort:Output|step
+ 10. State Machine - |4sw_1|NoCSimp3_sw:sw2|OutPort:Output|step
+ 11. State Machine - |4sw_1|NoCSimp3_sw:sw3|OutPort:Output|step
+ 12. State Machine - |4sw_1|NoCSimp3_sw:sw1|OutPort:Output|step
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram
+ 19. Source assignments for NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram
+ 20. Source assignments for NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram
+ 21. Source assignments for NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram
+ 22. Parameter Settings for User Entity Instance: LocalCPU:CPU1|outputCPU:inst1
+ 23. Parameter Settings for User Entity Instance: LocalCPU:CPU1|inputCPU:inst
+ 24. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw1|InPort:Input
+ 25. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component
+ 26. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw1|OutPort:Output
+ 27. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw3|InPort:Input
+ 28. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component
+ 29. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw3|OutPort:Output
+ 30. Parameter Settings for User Entity Instance: LocalCPU:CPU3|outputCPU:inst1
+ 31. Parameter Settings for User Entity Instance: LocalCPU:CPU3|inputCPU:inst
+ 32. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw2|InPort:Input
+ 33. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component
+ 34. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw2|OutPort:Output
+ 35. Parameter Settings for User Entity Instance: LocalCPU:CPU2|outputCPU:inst1
+ 36. Parameter Settings for User Entity Instance: LocalCPU:CPU2|inputCPU:inst
+ 37. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw0|InPort:Input
+ 38. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component
+ 39. Parameter Settings for User Entity Instance: NoCSimp3_sw:sw0|OutPort:Output
+ 40. Parameter Settings for User Entity Instance: LocalCPU:CPU0|outputCPU:inst1
+ 41. Parameter Settings for User Entity Instance: LocalCPU:CPU0|inputCPU:inst
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+ 45. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue May 15 22:52:26 2018       ;
+; Quartus Prime Version           ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
+; Revision Name                   ; rev8                                        ;
+; Top-level Entity Name           ; 4sw_1                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 615                                         ;
+; Total pins                      ; 310                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 2,368                                       ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; 4sw_1              ; rev8               ;
+; Family name                                                                     ; Cyclone V          ; Stratix II         ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation                             ; 1                  ; 1                  ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; Off                ; Off                ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 100                ; 100                ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+; input_m.v                        ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/input_m.v                   ;         ;
+; output_m.v                       ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/output_m.v                  ;         ;
+; NoCSimp3_sw.bdf                  ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/NoCSimp3_sw.bdf             ;         ;
+; 4sw_1.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/4sw_1.bdf                   ;         ;
+; inputCPU.v                       ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/inputCPU.v                  ;         ;
+; outputCPU.v                      ; yes             ; User Verilog HDL File              ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/outputCPU.v                 ;         ;
+; LocalCPU.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/LocalCPU.bdf                ;         ;
+; fifo.v                           ; yes             ; Auto-Found Wizard-Generated File   ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/fifo.v                      ;         ;
+; scfifo.tdf                       ; yes             ; Auto-Found AHDL File               ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/scfifo.tdf    ;         ;
+; a_regfifo.inc                    ; yes             ; Auto-Found AHDL File               ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/a_regfifo.inc ;         ;
+; a_dpfifo.inc                     ; yes             ; Auto-Found AHDL File               ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/a_dpfifo.inc  ;         ;
+; a_i2fifo.inc                     ; yes             ; Auto-Found AHDL File               ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/a_i2fifo.inc  ;         ;
+; a_fffifo.inc                     ; yes             ; Auto-Found AHDL File               ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/a_fffifo.inc  ;         ;
+; a_f2fifo.inc                     ; yes             ; Auto-Found AHDL File               ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/a_f2fifo.inc  ;         ;
+; aglobal72.inc                    ; yes             ; Auto-Found AHDL File               ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/aglobal72.inc ;         ;
+; db/scfifo_92e1.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/scfifo_92e1.tdf          ;         ;
+; db/a_dpfifo_occ1.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf        ;         ;
+; db/altsyncram_vcp1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/altsyncram_vcp1.tdf      ;         ;
+; db/cmpr_3l8.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cmpr_3l8.tdf             ;         ;
+; db/cntr_ggb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cntr_ggb.tdf             ;         ;
+; db/cntr_tg7.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cntr_tg7.tdf             ;         ;
+; db/cntr_hgb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cntr_hgb.tdf             ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 337       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 384       ;
+;     -- 7 input functions                    ; 3         ;
+;     -- 6 input functions                    ; 63        ;
+;     -- 5 input functions                    ; 60        ;
+;     -- 4 input functions                    ; 145       ;
+;     -- <=3 input functions                  ; 113       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 615       ;
+;                                             ;           ;
+; I/O pins                                    ; 310       ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 2368      ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 763       ;
+; Total fan-out                               ; 5926      ;
+; Average fan-out                             ; 3.35      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                      ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name     ; Library Name ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |4sw_1                                      ; 384 (0)             ; 615 (0)                   ; 2368              ; 0          ; 310  ; 0            ; |4sw_1                                                                                                                           ; 4sw_1           ; work         ;
+;    |NoCSimp3_sw:sw0|                        ; 95 (0)              ; 145 (0)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0                                                                                                           ; NoCSimp3_sw     ; work         ;
+;       |InPort:Input|                        ; 53 (53)             ; 44 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|InPort:Input                                                                                              ; InPort          ; work         ;
+;       |OutPort:Output|                      ; 14 (14)             ; 78 (78)                   ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|OutPort:Output                                                                                            ; OutPort         ; work         ;
+;       |fifo:inst|                           ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst                                                                                                 ; fifo            ; work         ;
+;          |scfifo:scfifo_component|          ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component                                                                         ; scfifo          ; work         ;
+;             |scfifo_92e1:auto_generated|    ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated                                              ; scfifo_92e1     ; work         ;
+;                |a_dpfifo_occ1:dpfifo|       ; 28 (17)             ; 23 (12)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo                         ; a_dpfifo_occ1   ; work         ;
+;                   |altsyncram_vcp1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ; altsyncram_vcp1 ; work         ;
+;                   |cntr_ggb:rd_ptr_msb|     ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_ggb:rd_ptr_msb     ; cntr_ggb        ; work         ;
+;                   |cntr_hgb:wr_ptr|         ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_hgb:wr_ptr         ; cntr_hgb        ; work         ;
+;                   |cntr_tg7:usedw_counter|  ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_tg7:usedw_counter  ; cntr_tg7        ; work         ;
+;    |NoCSimp3_sw:sw1|                        ; 96 (0)              ; 144 (0)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1                                                                                                           ; NoCSimp3_sw     ; work         ;
+;       |InPort:Input|                        ; 54 (54)             ; 44 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|InPort:Input                                                                                              ; InPort          ; work         ;
+;       |OutPort:Output|                      ; 14 (14)             ; 77 (77)                   ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|OutPort:Output                                                                                            ; OutPort         ; work         ;
+;       |fifo:inst|                           ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst                                                                                                 ; fifo            ; work         ;
+;          |scfifo:scfifo_component|          ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component                                                                         ; scfifo          ; work         ;
+;             |scfifo_92e1:auto_generated|    ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated                                              ; scfifo_92e1     ; work         ;
+;                |a_dpfifo_occ1:dpfifo|       ; 28 (17)             ; 23 (12)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo                         ; a_dpfifo_occ1   ; work         ;
+;                   |altsyncram_vcp1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ; altsyncram_vcp1 ; work         ;
+;                   |cntr_ggb:rd_ptr_msb|     ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_ggb:rd_ptr_msb     ; cntr_ggb        ; work         ;
+;                   |cntr_hgb:wr_ptr|         ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_hgb:wr_ptr         ; cntr_hgb        ; work         ;
+;                   |cntr_tg7:usedw_counter|  ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_tg7:usedw_counter  ; cntr_tg7        ; work         ;
+;    |NoCSimp3_sw:sw2|                        ; 95 (0)              ; 146 (0)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2                                                                                                           ; NoCSimp3_sw     ; work         ;
+;       |InPort:Input|                        ; 53 (53)             ; 44 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|InPort:Input                                                                                              ; InPort          ; work         ;
+;       |OutPort:Output|                      ; 14 (14)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|OutPort:Output                                                                                            ; OutPort         ; work         ;
+;       |fifo:inst|                           ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst                                                                                                 ; fifo            ; work         ;
+;          |scfifo:scfifo_component|          ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component                                                                         ; scfifo          ; work         ;
+;             |scfifo_92e1:auto_generated|    ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated                                              ; scfifo_92e1     ; work         ;
+;                |a_dpfifo_occ1:dpfifo|       ; 28 (17)             ; 23 (12)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo                         ; a_dpfifo_occ1   ; work         ;
+;                   |altsyncram_vcp1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ; altsyncram_vcp1 ; work         ;
+;                   |cntr_ggb:rd_ptr_msb|     ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_ggb:rd_ptr_msb     ; cntr_ggb        ; work         ;
+;                   |cntr_hgb:wr_ptr|         ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_hgb:wr_ptr         ; cntr_hgb        ; work         ;
+;                   |cntr_tg7:usedw_counter|  ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_tg7:usedw_counter  ; cntr_tg7        ; work         ;
+;    |NoCSimp3_sw:sw3|                        ; 98 (0)              ; 180 (0)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3                                                                                                           ; NoCSimp3_sw     ; work         ;
+;       |InPort:Input|                        ; 55 (55)             ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|InPort:Input                                                                                              ; InPort          ; work         ;
+;       |OutPort:Output|                      ; 15 (15)             ; 112 (112)                 ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|OutPort:Output                                                                                            ; OutPort         ; work         ;
+;       |fifo:inst|                           ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst                                                                                                 ; fifo            ; work         ;
+;          |scfifo:scfifo_component|          ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component                                                                         ; scfifo          ; work         ;
+;             |scfifo_92e1:auto_generated|    ; 28 (0)              ; 23 (0)                    ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated                                              ; scfifo_92e1     ; work         ;
+;                |a_dpfifo_occ1:dpfifo|       ; 28 (17)             ; 23 (12)                   ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo                         ; a_dpfifo_occ1   ; work         ;
+;                   |altsyncram_vcp1:FIFOram| ; 0 (0)               ; 0 (0)                     ; 592               ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ; altsyncram_vcp1 ; work         ;
+;                   |cntr_ggb:rd_ptr_msb|     ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_ggb:rd_ptr_msb     ; cntr_ggb        ; work         ;
+;                   |cntr_hgb:wr_ptr|         ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_hgb:wr_ptr         ; cntr_hgb        ; work         ;
+;                   |cntr_tg7:usedw_counter|  ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |4sw_1|NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_tg7:usedw_counter  ; cntr_tg7        ; work         ;
++---------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                         ;
++--------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                 ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++--------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 37           ; 16           ; 37           ; 592  ; None ;
+; NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 37           ; 16           ; 37           ; 592  ; None ;
+; NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 37           ; 16           ; 37           ; 592  ; None ;
+; NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 37           ; 16           ; 37           ; 592  ; None ;
++--------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------+
+; State Machine - |4sw_1|NoCSimp3_sw:sw0|OutPort:Output|step ;
++---------+---------+---------+------------------------------+
+; Name    ; step.00 ; step.10 ; step.01                      ;
++---------+---------+---------+------------------------------+
+; step.00 ; 0       ; 0       ; 0                            ;
+; step.01 ; 1       ; 0       ; 1                            ;
+; step.10 ; 1       ; 1       ; 0                            ;
++---------+---------+---------+------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------+
+; State Machine - |4sw_1|NoCSimp3_sw:sw2|OutPort:Output|step ;
++---------+---------+---------+------------------------------+
+; Name    ; step.00 ; step.10 ; step.01                      ;
++---------+---------+---------+------------------------------+
+; step.00 ; 0       ; 0       ; 0                            ;
+; step.01 ; 1       ; 0       ; 1                            ;
+; step.10 ; 1       ; 1       ; 0                            ;
++---------+---------+---------+------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------+
+; State Machine - |4sw_1|NoCSimp3_sw:sw3|OutPort:Output|step ;
++---------+---------+---------+------------------------------+
+; Name    ; step.00 ; step.10 ; step.01                      ;
++---------+---------+---------+------------------------------+
+; step.00 ; 0       ; 0       ; 0                            ;
+; step.01 ; 1       ; 0       ; 1                            ;
+; step.10 ; 1       ; 1       ; 0                            ;
++---------+---------+---------+------------------------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------+
+; State Machine - |4sw_1|NoCSimp3_sw:sw1|OutPort:Output|step ;
++---------+---------+---------+------------------------------+
+; Name    ; step.00 ; step.10 ; step.01                      ;
++---------+---------+---------+------------------------------+
+; step.00 ; 0       ; 0       ; 0                            ;
+; step.01 ; 1       ; 0       ; 1                            ;
+; step.10 ; 1       ; 1       ; 0                            ;
++---------+---------+---------+------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; NoCSimp3_sw:sw0|OutPort:Output|dataOutE[1]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw3|OutPort:Output|dataOutL[1,3]  ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw3|OutPort:Output|dataOutL[0]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw1|OutPort:Output|dataOutS[1..3] ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw2|OutPort:Output|dataOutN[1]    ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw1|OutPort:Output|dataOutW[1]    ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw3|OutPort:Output|dataOutN[3]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw3|OutPort:Output|dataOutN[1]    ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw2|OutPort:Output|dataOutE[1]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw2|OutPort:Output|dataOutN[3]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw1|OutPort:Output|dataOutW[0]    ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw0|OutPort:Output|dataOutS[2,3]  ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw3|OutPort:Output|dataOutW[0]    ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw0|OutPort:Output|dataOutS[0]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw3|OutPort:Output|dataOutW[1]    ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw0|OutPort:Output|dataOutS[1]    ; Stuck at GND due to stuck port data_in ;
+; NoCSimp3_sw:sw3|OutPort:Output|dataOutL[2]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw1|OutPort:Output|dataOutS[0]    ; Stuck at VCC due to stuck port data_in ;
+; NoCSimp3_sw:sw2|OutPort:Output|dataOutN[0]    ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 23        ;                                        ;
++-----------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                         ;
++--------------------------------------------+---------------------------+--------------------------------------------+
+; Register name                              ; Reason for Removal        ; Registers Removed due to This Register     ;
++--------------------------------------------+---------------------------+--------------------------------------------+
+; NoCSimp3_sw:sw0|OutPort:Output|dataOutE[1] ; Stuck at VCC              ; NoCSimp3_sw:sw1|OutPort:Output|dataOutW[0] ;
+;                                            ; due to stuck port data_in ;                                            ;
++--------------------------------------------+---------------------------+--------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 615   ;
+; Number of registers using Synchronous Clear  ; 136   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 305   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 543   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; NoCSimp3_sw:sw1|InPort:Input|DataFiFo[3] ; 1       ;
+; NoCSimp3_sw:sw1|InPort:Input|DataFiFo[0] ; 1       ;
+; NoCSimp3_sw:sw3|InPort:Input|DataFiFo[3] ; 1       ;
+; NoCSimp3_sw:sw3|InPort:Input|DataFiFo[0] ; 1       ;
+; NoCSimp3_sw:sw0|InPort:Input|DataFiFo[3] ; 1       ;
+; NoCSimp3_sw:sw0|InPort:Input|DataFiFo[0] ; 1       ;
+; NoCSimp3_sw:sw2|InPort:Input|DataFiFo[3] ; 1       ;
+; NoCSimp3_sw:sw2|InPort:Input|DataFiFo[0] ; 1       ;
+; Total number of inverted registers = 8   ;         ;
++------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 8:1                ; 34 bits   ; 170 LEs       ; 68 LEs               ; 102 LEs                ; Yes        ; |4sw_1|NoCSimp3_sw:sw0|InPort:Input|DataFiFo[12] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw0|InPort:Input|Inw[2]       ;
+; 8:1                ; 34 bits   ; 170 LEs       ; 68 LEs               ; 102 LEs                ; Yes        ; |4sw_1|NoCSimp3_sw:sw1|InPort:Input|DataFiFo[23] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw1|InPort:Input|Inw[1]       ;
+; 8:1                ; 34 bits   ; 170 LEs       ; 68 LEs               ; 102 LEs                ; Yes        ; |4sw_1|NoCSimp3_sw:sw3|InPort:Input|DataFiFo[31] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw3|InPort:Input|Inw[3]       ;
+; 8:1                ; 34 bits   ; 170 LEs       ; 68 LEs               ; 102 LEs                ; Yes        ; |4sw_1|NoCSimp3_sw:sw2|InPort:Input|DataFiFo[11] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw2|InPort:Input|Inw[2]       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw1|OutPort:Output|Outr[4]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw3|OutPort:Output|Outr[1]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw0|OutPort:Output|Outr[4]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw2|OutPort:Output|Outr[4]    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw0|InPort:Input|DataFiFo[0]  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw1|InPort:Input|DataFiFo[0]  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw3|InPort:Input|DataFiFo[3]  ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |4sw_1|NoCSimp3_sw:sw2|InPort:Input|DataFiFo[3]  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |4sw_1|NoCSimp3_sw:sw0|InPort:Input|port         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |4sw_1|NoCSimp3_sw:sw1|InPort:Input|port         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |4sw_1|NoCSimp3_sw:sw3|InPort:Input|port         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |4sw_1|NoCSimp3_sw:sw2|InPort:Input|port         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                  ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                  ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                  ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                  ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU1|outputCPU:inst1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU1|inputCPU:inst ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw1|InPort:Input ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Untyped                                          ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component ;
++-------------------------+-------------+--------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                   ;
++-------------------------+-------------+--------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                         ;
+; lpm_width               ; 37          ; Signed Integer                                         ;
+; LPM_NUMWORDS            ; 16          ; Signed Integer                                         ;
+; LPM_WIDTHU              ; 4           ; Signed Integer                                         ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                ;
+; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                                ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                ;
+; USE_EAB                 ; ON          ; Untyped                                                ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                ;
+; CBXI_PARAMETER          ; scfifo_92e1 ; Untyped                                                ;
++-------------------------+-------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw1|OutPort:Output ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; position       ; 0101  ; Unsigned Binary                                    ;
+; DATA_WIDTH     ; 37    ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw3|InPort:Input ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Untyped                                          ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw3|fifo:inst|scfifo:scfifo_component ;
++-------------------------+-------------+--------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                   ;
++-------------------------+-------------+--------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                         ;
+; lpm_width               ; 37          ; Signed Integer                                         ;
+; LPM_NUMWORDS            ; 16          ; Signed Integer                                         ;
+; LPM_WIDTHU              ; 4           ; Signed Integer                                         ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                ;
+; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                                ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                ;
+; USE_EAB                 ; ON          ; Untyped                                                ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                ;
+; CBXI_PARAMETER          ; scfifo_92e1 ; Untyped                                                ;
++-------------------------+-------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw3|OutPort:Output ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; position       ; 0101  ; Unsigned Binary                                    ;
+; DATA_WIDTH     ; 37    ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU3|outputCPU:inst1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU3|inputCPU:inst ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw2|InPort:Input ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Untyped                                          ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw2|fifo:inst|scfifo:scfifo_component ;
++-------------------------+-------------+--------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                   ;
++-------------------------+-------------+--------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                         ;
+; lpm_width               ; 37          ; Signed Integer                                         ;
+; LPM_NUMWORDS            ; 16          ; Signed Integer                                         ;
+; LPM_WIDTHU              ; 4           ; Signed Integer                                         ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                ;
+; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                                ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                ;
+; USE_EAB                 ; ON          ; Untyped                                                ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                ;
+; CBXI_PARAMETER          ; scfifo_92e1 ; Untyped                                                ;
++-------------------------+-------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw2|OutPort:Output ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; position       ; 0101  ; Unsigned Binary                                    ;
+; DATA_WIDTH     ; 37    ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU2|outputCPU:inst1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU2|inputCPU:inst ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw0|InPort:Input ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Untyped                                          ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw0|fifo:inst|scfifo:scfifo_component ;
++-------------------------+-------------+--------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                   ;
++-------------------------+-------------+--------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                             ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                           ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                           ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                         ;
+; lpm_width               ; 37          ; Signed Integer                                         ;
+; LPM_NUMWORDS            ; 16          ; Signed Integer                                         ;
+; LPM_WIDTHU              ; 4           ; Signed Integer                                         ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                ;
+; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                                ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                ;
+; USE_EAB                 ; ON          ; Untyped                                                ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                ;
+; CBXI_PARAMETER          ; scfifo_92e1 ; Untyped                                                ;
++-------------------------+-------------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: NoCSimp3_sw:sw0|OutPort:Output ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; position       ; 0101  ; Unsigned Binary                                    ;
+; DATA_WIDTH     ; 37    ; Untyped                                            ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU0|outputCPU:inst1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LocalCPU:CPU0|inputCPU:inst ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; DATA_WIDTH     ; 37    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 615                         ;
+;     CLR               ; 72                          ;
+;     ENA               ; 310                         ;
+;     ENA CLR           ; 97                          ;
+;     ENA CLR SCLR      ; 136                         ;
+; arriav_lcell_comb     ; 386                         ;
+;     arith             ; 44                          ;
+;         1 data inputs ; 32                          ;
+;         2 data inputs ; 12                          ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 339                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 145                         ;
+;         5 data inputs ; 60                          ;
+;         6 data inputs ; 63                          ;
+; boundary_port         ; 310                         ;
+; stratixv_ram_block    ; 148                         ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.18                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Tue May 15 22:52:02 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off NoCSimp -c rev8
+Warning (12473): User specified to use only one processors but 2 processors were detected which could be used to decrease run time.
+Info (12021): Found 1 design units, including 1 entities, in source file input_m.v
+    Info (12023): Found entity 1: InPort File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/input_m.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file output_m.v
+    Info (12023): Found entity 1: OutPort File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/output_m.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nocsimp3_m_inout.bdf
+    Info (12023): Found entity 1: NoCSimp3_m_inout
+Info (12021): Found 1 design units, including 1 entities, in source file nocsimp3_sw.bdf
+    Info (12023): Found entity 1: NoCSimp3_sw
+Info (12021): Found 1 design units, including 1 entities, in source file 4sw_1.bdf
+    Info (12023): Found entity 1: 4sw_1
+Info (12021): Found 1 design units, including 1 entities, in source file inputcpu.v
+    Info (12023): Found entity 1: inputCPU File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/inputCPU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file outputcpu.v
+    Info (12023): Found entity 1: outputCPU File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/outputCPU.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file localcpu.bdf
+    Info (12023): Found entity 1: LocalCPU
+Info (12127): Elaborating entity "4sw_1" for the top level hierarchy
+Warning (275011): Block or symbol "NoCSimp3_sw" of instance "sw1" overlaps another block or symbol
+Warning (275011): Block or symbol "LocalCPU" of instance "CPU0" overlaps another block or symbol
+Warning (275011): Block or symbol "LocalCPU" of instance "CPU1" overlaps another block or symbol
+Warning (275043): Pin "dataGet0" is missing source
+Info (12128): Elaborating entity "LocalCPU" for hierarchy "LocalCPU:CPU1"
+Warning (275012): Pin "dataFromCPUToRouter[31..0]" overlaps another pin, block, or symbol
+Warning (275011): Block or symbol "inputCPU" of instance "inst" overlaps another block or symbol
+Warning (275043): Pin "dataGet" is missing source
+Info (12128): Elaborating entity "outputCPU" for hierarchy "LocalCPU:CPU1|outputCPU:inst1"
+Warning (10034): Output port "dataInL" at outputCPU.v(18) has no driver File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/outputCPU.v Line: 18
+Warning (10034): Output port "Inr" at outputCPU.v(19) has no driver File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/outputCPU.v Line: 19
+Warning (10034): Output port "Outw" at outputCPU.v(19) has no driver File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/outputCPU.v Line: 19
+Warning (12158): Entity "outputCPU" contains only dangling pins
+Info (12128): Elaborating entity "inputCPU" for hierarchy "LocalCPU:CPU1|inputCPU:inst"
+Warning (10034): Output port "dataOutL" at inputCPU.v(14) has no driver File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/inputCPU.v Line: 14
+Warning (10034): Output port "dataFromWhom" at inputCPU.v(17) has no driver File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/inputCPU.v Line: 17
+Warning (10034): Output port "dataGet" at inputCPU.v(16) has no driver File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/inputCPU.v Line: 16
+Warning (12158): Entity "inputCPU" contains only dangling pins
+Info (12128): Elaborating entity "NoCSimp3_sw" for hierarchy "NoCSimp3_sw:sw1"
+Info (12128): Elaborating entity "InPort" for hierarchy "NoCSimp3_sw:sw1|InPort:Input"
+Warning (10230): Verilog HDL assignment warning at input_m.v(57): truncated value with size 32 to match size of target (3) File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/input_m.v Line: 57
+Warning (12125): Using design file fifo.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: fifo File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/fifo.v Line: 39
+Info (12128): Elaborating entity "fifo" for hierarchy "NoCSimp3_sw:sw1|fifo:inst"
+Warning (12090): Entity "scfifo" obtained from "scfifo.tdf" instead of from Quartus Prime megafunction library File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/scfifo.tdf Line: 236
+Warning (12125): Using design file megafunctions/scfifo.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: scfifo File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/scfifo.tdf Line: 236
+Info (12128): Elaborating entity "scfifo" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/fifo.v Line: 81
+Warning (287001): Assertion warning: Device family Cyclone V does not have M4K blocks -- using available memory blocks File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/scfifo_92e1.tdf Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_92e1.tdf
+    Info (12023): Found entity 1: scfifo_92e1 File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/scfifo_92e1.tdf Line: 25
+Info (12128): Elaborating entity "scfifo_92e1" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/megafunctions/scfifo.tdf Line: 296
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_occ1.tdf
+    Info (12023): Found entity 1: a_dpfifo_occ1 File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf Line: 33
+Info (12128): Elaborating entity "a_dpfifo_occ1" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/scfifo_92e1.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_vcp1.tdf
+    Info (12023): Found entity 1: altsyncram_vcp1 File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/altsyncram_vcp1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_vcp1" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|altsyncram_vcp1:FIFOram" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_3l8.tdf
+    Info (12023): Found entity 1: cmpr_3l8 File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cmpr_3l8.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_3l8" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cmpr_3l8:almost_full_comparer" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf Line: 55
+Info (12128): Elaborating entity "cmpr_3l8" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cmpr_3l8:three_comparison" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf Line: 56
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ggb.tdf
+    Info (12023): Found entity 1: cntr_ggb File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cntr_ggb.tdf Line: 26
+Info (12128): Elaborating entity "cntr_ggb" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_ggb:rd_ptr_msb" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_tg7.tdf
+    Info (12023): Found entity 1: cntr_tg7 File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cntr_tg7.tdf Line: 26
+Info (12128): Elaborating entity "cntr_tg7" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_tg7:usedw_counter" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf Line: 58
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_hgb.tdf
+    Info (12023): Found entity 1: cntr_hgb File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/cntr_hgb.tdf Line: 26
+Info (12128): Elaborating entity "cntr_hgb" for hierarchy "NoCSimp3_sw:sw1|fifo:inst|scfifo:scfifo_component|scfifo_92e1:auto_generated|a_dpfifo_occ1:dpfifo|cntr_hgb:wr_ptr" File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/db/a_dpfifo_occ1.tdf Line: 59
+Info (12128): Elaborating entity "OutPort" for hierarchy "NoCSimp3_sw:sw1|OutPort:Output"
+Warning (10036): Verilog HDL or VHDL warning at output_m.v(30): object "port" assigned a value but never read File: C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/output_m.v Line: 30
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dataGet0" is stuck at GND
+    Warning (13410): Pin "dataGet1" is stuck at GND
+    Warning (13410): Pin "dataGet2" is stuck at GND
+    Warning (13410): Pin "dataGet3" is stuck at GND
+    Warning (13410): Pin "Inr0" is stuck at GND
+    Warning (13410): Pin "Outw0" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[36]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[35]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[34]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[33]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[32]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[31]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[30]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[29]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[28]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[27]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[26]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[25]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[24]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[23]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[22]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[21]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[20]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[19]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[18]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[17]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[16]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[15]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[14]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[13]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[12]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[11]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[10]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[9]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[8]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[7]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[6]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[5]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[4]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[3]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[2]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[1]" is stuck at GND
+    Warning (13410): Pin "dataOutCPU[0]" is stuck at GND
+    Warning (13410): Pin "dataOutE0[1]" is stuck at VCC
+    Warning (13410): Pin "dataOutL3[3]" is stuck at GND
+    Warning (13410): Pin "dataOutL3[2]" is stuck at VCC
+    Warning (13410): Pin "dataOutL3[1]" is stuck at GND
+    Warning (13410): Pin "dataOutL3[0]" is stuck at VCC
+    Warning (13410): Pin "dataOutS1[3]" is stuck at GND
+    Warning (13410): Pin "dataOutS1[2]" is stuck at GND
+    Warning (13410): Pin "dataOutS1[1]" is stuck at GND
+    Warning (13410): Pin "dataOutS1[0]" is stuck at VCC
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/rev8.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 148 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dataSend3"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[31]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[30]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[29]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[28]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[27]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[26]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[25]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[24]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[23]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[22]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[21]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[20]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[19]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[18]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[17]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[16]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[15]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[14]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[13]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[12]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[11]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[10]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[9]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[8]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[7]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[6]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[5]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[4]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[3]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[2]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[1]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter3[0]"
+    Warning (15610): No output dependent on input pin "dataToWhom3[3]"
+    Warning (15610): No output dependent on input pin "dataToWhom3[2]"
+    Warning (15610): No output dependent on input pin "dataToWhom3[1]"
+    Warning (15610): No output dependent on input pin "dataToWhom3[0]"
+    Warning (15610): No output dependent on input pin "dataSend2"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[31]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[30]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[29]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[28]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[27]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[26]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[25]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[24]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[23]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[22]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[21]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[20]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[19]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[18]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[17]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[16]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[15]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[14]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[13]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[12]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[11]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[10]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[9]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[8]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[7]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[6]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[5]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[4]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[3]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[2]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[1]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter2[0]"
+    Warning (15610): No output dependent on input pin "dataToWhom2[3]"
+    Warning (15610): No output dependent on input pin "dataToWhom2[2]"
+    Warning (15610): No output dependent on input pin "dataToWhom2[1]"
+    Warning (15610): No output dependent on input pin "dataToWhom2[0]"
+    Warning (15610): No output dependent on input pin "dataSend0"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[31]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[30]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[29]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[28]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[27]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[26]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[25]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[24]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[23]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[22]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[21]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[20]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[19]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[18]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[17]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[16]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[15]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[14]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[13]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[12]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[11]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[10]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[9]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[8]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[7]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[6]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[5]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[4]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[3]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[2]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[1]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter0[0]"
+    Warning (15610): No output dependent on input pin "dataToWhom0[3]"
+    Warning (15610): No output dependent on input pin "dataToWhom0[2]"
+    Warning (15610): No output dependent on input pin "dataToWhom0[1]"
+    Warning (15610): No output dependent on input pin "dataToWhom0[0]"
+    Warning (15610): No output dependent on input pin "dataSend1"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[31]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[30]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[29]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[28]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[27]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[26]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[25]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[24]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[23]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[22]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[21]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[20]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[19]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[18]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[17]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[16]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[15]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[14]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[13]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[12]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[11]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[10]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[9]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[8]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[7]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[6]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[5]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[4]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[3]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[2]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[1]"
+    Warning (15610): No output dependent on input pin "dataFromCPUToRouter1[0]"
+    Warning (15610): No output dependent on input pin "dataToWhom1[3]"
+    Warning (15610): No output dependent on input pin "dataToWhom1[2]"
+    Warning (15610): No output dependent on input pin "dataToWhom1[1]"
+    Warning (15610): No output dependent on input pin "dataToWhom1[0]"
+Info (21057): Implemented 1197 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 150 input pins
+    Info (21059): Implemented 160 output pins
+    Info (21061): Implemented 739 logic cells
+    Info (21064): Implemented 148 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 224 warnings
+    Info: Peak virtual memory: 734 megabytes
+    Info: Processing ended: Tue May 15 22:52:26 2018
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:43
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/intelFPGA_lite/16.1/NoCSimp_stat/NoCSimp_stat/rev8.map.smsg.
+
+
